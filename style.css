@@ -1,8 +1,71 @@
-body {
-margin: 0;
-padding: 0;
+@font-face {
+    font-family: blackFuture;
+    src: url("BlackFuture.otf") format("opentype");
 }
-header {
-font-size: 50px;
+
+body {
+margin: 0px;
+padding: 0px;
+background-image: url('img/bg.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+div {
 text-align: center;
+font-family: blackFuture;
+}
+
+.dc {
+position: relative;
+top: 50px;
+left: 18%;
+width: 60%;
+padding: 0px;
+font-family: blackFuture;
+color: white;
+text-align: center;
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(86,7,159,1) 54%, rgba(99,26,207,1) 100%);
+border-radius: 35px;
+transition: all 1s ease;
+transform: scale(1);
+}
+.dc:hover {
+transform: scale(1.2) perspective(1px);
+}
+
+.dce {
+color: yellow;
+font-weight: bold;
+font-size: 50px; 
+}
+
+.dctxt {
+font-size: 50px;
+}
+
+.dclogo {
+width: 30%;
+height: 30%;
+}
+
+.dc a:link, .dc a:visited {
+color: white;
+text-decoration: none!important;
+}
+
+.off {
+position: relative;
+font-size: 30px;
+text-align: center;
+color: white;
+font-family: blackFuture;
+text-decoration: none!important;
+}
+
+.off a:link, .off a:visited {
+color: white;
+text-decoration: none!important;
 }
