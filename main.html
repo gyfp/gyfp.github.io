@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GYFP time</title>
+    </head>
+    <body>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: hsl(198, 83%, 82%);
+            }
+            p {
+                margin: 0;
+                padding: 0;
+            }
+            .titl {
+                text-align: center;
+                font-size: 120%;
+            }
+            .sec {
+                text-align: center;
+                font size: 120%;
+            }
+            .npa {
+                height: 20px;
+                width: 20px;
+                background-color: #FF0000;
+                border-radius: 50%;
+                display: inline-block;
+            }
+            .pas {
+                height: 20px;
+                width: 20px;
+                background-color: #FFD700;
+                border-radius: 50%;
+                display: inline-block;
+            }
+            .oja {
+                height: 20px;
+                width: 20px;
+                background-color: #00FF00;
+                border-radius: 50%;
+                display: inline-block;
+            }
+            .wi {
+                height: 20px;
+                width: 20px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+            }
+            #platform {
+                text-align: center;
+            }
+            #statstt {
+                font-size: 70%;
+            }
+            .gray {
+                height: 5px;
+                width: 250px;
+                background-color: #bbb;
+                border-radius: 8%;
+                display: inline-block;
+            }
+            label {
+                font-size: 200%;
+            }
+        </style>
+        
+        <div class="titl"><p>Najbolje vreme za objavljivanje videa!</p></div>
+        <div>
+            <p class="sec"><span class="npa"></span> Nije proslo algoritam</p>
+            <p class="sec"><span class="pas"></span> Proslo je algoritam ali je stalo</p>
+            <p class="sec"><span class="oja"></span> Ostalo je u algoritmu</p>
+            <p class="sec"><span class="wi"></span> Nema informacija</p>
+        </div>
+        <div>
+            <form id="platform">
+                <div><input type="radio" name="which" value="tt" id="tt" onclick="tts();"/><label for="tt">TikTok</label></div>
+                <div><input type="radio" name="which" value="ig" id ="ig" onclick="igs();"/><label for="ig">Instagram</label></div>
+                <div><input type="radio" name="which" value="yt" id="yt" onclick="yts();"/><label for="yt">YouTube</label></div>
+            </form>
+            <hr>
+        </div>
+        
+        <div id="statstt">
+            <p style="display: inline-block;">00:00</p><span class="gray"></span>
+            <p style="color: hsl(198, 83%, 82%); display: inline-block;">00:00</p><span class="gray"></span>
+            <p style="display: inline-block;">00:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>00:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>00:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>00:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>00:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>01:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>01:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>01:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>01:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>01:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>01:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>02:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>02:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>02:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>02:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>02:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>02:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>03:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>03:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>03:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>03:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>03:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>03:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>04:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>04:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>04:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>04:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>04:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>04:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>05:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>05:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>05:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>05:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>05:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>05:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>06:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>06:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>06:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>06:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>06:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>06:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>07:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>07:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>07:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>07:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>07:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>07:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>08:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>08:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>08:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>08:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>08:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>08:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>09:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>09:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>09:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>09:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>09:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>09:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>10:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>10:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>10:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>10:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>10:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>10:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>11:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>11:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>11:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>11:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>11:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>11:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>12:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>12:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>12:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>12:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>12:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>12:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>13:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>13:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>13:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>13:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>13:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>13:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>14:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>14:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>14:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>14:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>14:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>14:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>15:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>15:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>15:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>15:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>15:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>15:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>16:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>16:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>16:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>16:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>16:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>16:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>17:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>17:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>17:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>17:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>17:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>17:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>18:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>18:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>18:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>18:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>18:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>18:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>19:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>19:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>19:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>19:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>19:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>19:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>20:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>20:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>20:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>20:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>20:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>20:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>21:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>21:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>21:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>21:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>21:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>21:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>22:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>22:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>22:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>22:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>22:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>22:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>23:00</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>23:10</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>23:20</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>23:30</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>23:40</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+            <p>23:50</p><span></span>
+            <p style="color: hsl(198, 83%, 82%);">00:00</p><span></span>
+        </div>
+        <div id="statsig">
+            
+        </div>
+        <div id="statsyt">
+            
+        </div>
+        
+        <script>
+            function tts() {
+                alert("tt");
+            }
+            function igs() {
+                alert("ig");
+            }
+            function yts() {
+                alert("yt");
+            }
+        </script>
+    </body>
+</html>
